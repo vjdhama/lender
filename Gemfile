@@ -45,7 +45,16 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
 
+group :development do
+	gem 'guard-rails'
+	gem 'guard-livereload'
+	gem 'rack-livereload'
+	gem 'guard-bundler'
+end
+
 gem 'rails_12factor', group: :production
+
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
