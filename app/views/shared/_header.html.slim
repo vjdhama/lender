@@ -1,7 +1,9 @@
 .navbar.navbar-default.navbar-static-top
-	.container-fluid
+	.container
 		.navbar-header
 			button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
 			  span.fa.fa-bars
 		a.navbar-brand Lender
 		.navbar-collapse.collapse
+			ul.nav.navbar-nav.navbar-right
+				li #{current_user.email}

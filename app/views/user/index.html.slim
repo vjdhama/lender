@@ -1,4 +1,16 @@
 .container
 	.row
-		p Welcome to shitload of shit!!
-		p Walk with caution!!
+		.col-md-12
+			h2 Events
+			= link_to "New Event", events_new_path, :class => "btn btn-success"
+			- @events.each do |event|
+				.well.well-sm
+					h5 #{event.description}
+					p Amount spend : #{event.total_spent}
+					p Total people : #{event.people_count}
+		.col-md-12	
+			h2 All shitty people registered!!
+			ul
+				- @users.each do |user|	
+					li #{user.email}
+
